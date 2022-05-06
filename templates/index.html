@@ -22,7 +22,7 @@
                     <td>{{ task.content }}</td>
                     <td>{{ task.date_created.strftime("%b %-d, %Y") }}
                         <br>
-                        {{ task.date_created.strftime("%-I:%M %p GMT") }}
+                        {{ task.date_created.strftime("%-I:%M %p") }}
                     </td>
                     <td>
                         <a href="/edit/{{ task.id }}"> Edit </a> 
