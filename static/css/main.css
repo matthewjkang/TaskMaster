@@ -1,48 +1,60 @@
-body, html {
+@font-face {
+  font-family: UbuntuMono;
+  src: url(../fonts/BeVietnamPro-Regular.ttf);
+}
+html{
+  font-family: UbuntuMono;
+  font-size: 22px;
+  background-image:url('https://cdn.wallpapersafari.com/8/77/bKTLUF.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body{
     margin: 20px;
-    font-family: sans-serif;
-    background-color: white;
     color:rgb(0, 0, 0);
     lighting-color:blue;
     outline-color:white;
     text-align:center;
+    
 }
 center{
     margin-left: auto;
     margin-right: auto;
     
 }
-table, th, td{
+th{
+    border: 1px solid #02484d;
+    border-spacing: 0;
+    width: 40%;
+    font-size:20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0px;
+    border-style: solid;
+    border-color: #02484d;
+    background-color: rgb(0, 225, 255);
+}
+table, td{
     border: 1px solid #02484d;
     border-spacing: 0;
     width: 40%;
     font-size:14px;
     margin-left: auto;
     margin-right: auto;
-    border: .5px;
+    border: 0px;
     border-style: solid;
     border-color: #02484d;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 tr:nth-child(even) {
-  background-color: white;
+  background-color: rgb(255, 255, 255,0.1);
 }
-/*
 input[type=text], select {
-  width: 50;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #013438;
-  border-radius: 6px;
-  border-color: #013438;
-  box-sizing: border-box;
-  background-color:#2664f1;
-  color:white;
-  margin-right: 40px;
-
+  background-color: rgb(255, 255, 255,0.8)
 }
-*/
+
 
 input[type=submit] {
   width: 50;
