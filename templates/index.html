@@ -4,7 +4,7 @@
     {% endblock %}
     {% block body %}
     <div class = 'content'>
-        <h1>Good Afternoon</h1>
+        <h1><span id="greetings"></span></h1>
         <h3>Today is <span id="timeNow"></span></h3>
         {% if tasks|length < 1%}
         <h4>There are no tasks</h4>
@@ -12,15 +12,14 @@
         <table>
 
             <colgroup>
-                <col span="3" style="background-color: rgba(255, 255, 255, 0.1)">
-                <col style="background-color: rgba(255, 0, 0, 0.8)">
+                <!--<col span="3" style="background-color: rgba(255, 255, 255, 0.8)">
+                 <col style="background-color: rgba(255, 0, 0, 0.8)"> -->
             </colgroup>
 
             <tr>
                 <th>Task</th>
                 <th>Added</th>
-                <th>Edit </th>
-                <th>Delete </th>
+                <th colspan="2">Update</th>
             </tr>
             {% for task in tasks %}
                 <tr>
@@ -35,7 +34,7 @@
                         <a href="/edit/{{ task.id }}"> Edit </a> 
                     </td>
                     <td>
-                        <a href="/delete/{{ task.id }}" style="color:white"> Delete </a>                
+                        <a href="/delete/{{ task.id }}" style="color:red"> Remove </a>                
                     </td>
                 </tr>
             {% endfor %}
@@ -47,13 +46,27 @@
         </form>
         <script>
 
+        function refresh(){
             var elem = document.getElementById("timeNow");
             var now = new Date();
             var options = {  weekday:"long", month: 'short', day: '2-digit',
                             hour: 'numeric', minute: '2-digit'};
-            elem.innerHTML = now.toLocaleString('en-us', options);
-
             
+            elem.innerHTML = now.toLocaleString('en-us', options)}
+
+        function greetings(){
+            var elem = document.getElementById("greetings")
+            var now = new Date()
+            var curHr = now.getHours()
+            if (curHr < 12) {elem.innerHTML = 'Good Morning'} 
+            else if (curHr < 18) { elem.innerHTML = 'Good Afternoon' } 
+            else {  elem.innerHTML = 'Good Evening';}
+        }
+
+        greetings()
+        refresh()
+        setInterval(refresh, 30000);
+         
         </script>
     </div>
 {% endblock %}

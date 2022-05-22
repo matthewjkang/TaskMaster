@@ -6,7 +6,6 @@ html{
   font-family: UbuntuMono;
   font-size: 22px;
   background-image:url('https://cdn.wallpapersafari.com/8/77/bKTLUF.jpg');
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -27,32 +26,51 @@ th{
     border: 1px solid #02484d;
     border-spacing: 0;
     width: 40%;
+    border-radius: 5px;
     font-size:20px;
     margin-left: auto;
     margin-right: auto;
     border: 0px;
     border-style: solid;
     border-color: #02484d;
-    background-color: rgb(0, 225, 255);
+    background-color: #2664f1;
+    color: white;
+    box-shadow: 3px 3px 3px rgb(0 0 0);
+}
+td{
+  box-shadow: 3px 3px 3px rgb(0 0 0);
 }
 table, td{
     border: 1px solid #02484d;
     border-spacing: 0;
-    width: 40%;
+    border-radius: 5px;
+    width: 45%;
     font-size:14px;
     margin-left: auto;
     margin-right: auto;
     border: 0px;
     border-style: solid;
     border-color: #02484d;
-    background-color: rgba(255, 255, 255, 0.1);
+    /*background-color: rgba(255, 255, 255, 0.1);*/
+    border-collapse: separate;
+    border-spacing: 11px;
+    
+    
 }
 
 tr:nth-child(even) {
-  background-color: rgb(255, 255, 255,0.1);
+  background-color: rgb(255, 255, 255,0.75);
 }
+tr:nth-child(odd) {
+  background-color: rgb(255, 255, 255,0.75);
+}
+
 input[type=text], select {
-  background-color: rgb(255, 255, 255,0.8)
+  background-color: rgb(255, 255, 255);
+  min-height:1.4rem;
+  border-radius: 4px;
+  text-align: center;
+
 }
 
 
@@ -60,11 +78,13 @@ input[type=submit] {
   width: 50;
   background-color: #2664f1;
   color: white;
-  padding: 4px 9px;
-  margin: 8px 0;
+  font-size: 14px;
+  padding: 10px 20px;
+  margin: 11px 10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  box-shadow: 3px 3px 3px rgb(0 0 0);
 }
 
 input[type=submit]:hover {
