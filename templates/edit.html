@@ -6,6 +6,7 @@
 
     {% block body %}
     <div class = 'content'>
+        <h1><span id="greetings"></span></h1>
         <h1>Edit Task</h1>
 
         <form action = "/edit/{{task.id}}" method = 'POST'>
@@ -13,5 +14,20 @@
             <input type="submit" value = 'edit'>
         </form>
     </div>
+    <script>
+
+        function greetings(){
+            var elem = document.getElementById("greetings")
+            var now = new Date()
+            var curHr = now.getHours()
+            if (curHr < 12 && curHr > 6) {elem.innerHTML = 'Good Morning';document.body.style.backgroundImage="url('https://images2.alphacoders.com/179/179942.jpg')"} 
+            else if (curHr < 18 && curHr >= 12) { elem.innerHTML = 'Good Afternoon' } 
+            else {  elem.innerHTML = 'Good Evening';document.body.style.backgroundImage="url('https://wallpaperaccess.com/full/4790136.jpg')"}
+        }
+        greetings()
+        refresh()
+        setInterval(refresh, 30000);
+         
+        </script>
     {% endblock %}
 

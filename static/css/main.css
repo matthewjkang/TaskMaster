@@ -5,8 +5,6 @@
 html{
   font-family: UbuntuMono;
   font-size: 22px;
-  background-image:url('https://cdn.wallpapersafari.com/8/77/bKTLUF.jpg');
-  background-size: cover;
 }
 
 body{
@@ -15,6 +13,9 @@ body{
     lighting-color:blue;
     outline-color:white;
     text-align:center;
+    background-image:url('https://cdn.wallpapersafari.com/8/77/bKTLUF.jpg');
+    background-size: cover;
+    height:100vh;
     
 }
 center{

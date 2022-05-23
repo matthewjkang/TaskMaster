@@ -58,11 +58,10 @@
             var elem = document.getElementById("greetings")
             var now = new Date()
             var curHr = now.getHours()
-            if (curHr < 12) {elem.innerHTML = 'Good Morning'} 
-            else if (curHr < 18) { elem.innerHTML = 'Good Afternoon' } 
-            else {  elem.innerHTML = 'Good Evening';}
+            if (curHr < 12 && curHr > 6) {elem.innerHTML = 'Good Morning';document.body.style.backgroundImage="url('https://images2.alphacoders.com/179/179942.jpg')"} 
+            else if (curHr < 18 && curHr >= 12) { elem.innerHTML = 'Good Afternoon' } 
+            else {  elem.innerHTML = 'Good Evening';document.body.style.backgroundImage="url('https://wallpaperaccess.com/full/4790136.jpg')"}
         }
-
         greetings()
         refresh()
         setInterval(refresh, 30000);
